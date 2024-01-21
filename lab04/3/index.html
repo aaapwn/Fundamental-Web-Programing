@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab4 No.3 ✨</title>
+</head>
+<body>
+    <div class="container">
+        <h1>ลงทะเบียนเข้าร่วมงาน</h1>
+        <div id="form-input">
+            <input type="text" placeholder="รหัสนักศึกษา" id="stdId">
+            <input type="text" placeholder="ชื่อ" id="firstname">
+            <input type="text" placeholder="นามสกุล" id="lastname">
+            <button onclick="register()">ลงทะเบียน</button>
+        </div>
+        <hr width="100%">
+        <div class="show-data">
+            <table id="show-data">
+                <tr>
+                    <th>ลำดับที่</th>
+                    <th>รหัสนักศึกษา</th>
+                    <th>ชื่อ</th>
+                    <th>นามสกุล</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

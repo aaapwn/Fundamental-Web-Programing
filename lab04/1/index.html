@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab4 No.1 ✨</title>
+</head>
+<body>
+    <div class="container ">
+        <form id="calculate">
+            <div>
+                <label for="val1" class="form-label ">Value1 : </label>
+                <input
+                    type="number"
+                    class="form-input"
+                    id="val1"
+                />
+            </div>
+            <div>
+                <label for="val2" class="form-label  ">Value2 : </label>
+                <input
+                    type="number"
+                    class="form-input "
+                    id="val2"
+                />
+            </div>
+        </form>
+        <button class="btn " onclick="calculate()">Calculate !</button>
+        <div class="result">
+            <label for="">Result : </label>
+            <p id="result">-</p>
+        </div>
+        <hr width="100%">
+        <div class="history" id="display"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
