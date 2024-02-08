@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans+Narrow:wght@400;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 7.5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #f97316;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #ea580c;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background-color: #fb923c;
+  border-radius: 20px;
+}
+
+* {
+  scrollbar-width: 7.5px;
+  scrollbar-color: #f97316 none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.font-kanit {
+  font-family: "Kanit", sans-serif;
+}
+
+.font-pt-sans-narrow {
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.text-secondary {
+  color: #e0e1dd;
+}
+
+.code {
+  color: #eb5757;
+  background-color: #e0e1dd;
+  border-radius: 4px;
+  font-size: 85%;
+  padding: 0.1em 0.2em;
+}

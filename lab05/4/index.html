@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head class="scroll-smooth">
     <title>Lab5 No.4 ✨</title>
     <meta charset="utf-8" />
     <meta
@@ -31,7 +31,7 @@
     <div id="liveAlertPlaceholder" class="position-fixed top-0 start-50 translate-middle-x "></div>
 
     <main
-      class="d-flex flex-column justify-content-center align-items-center w-100 min-vh-100"
+      class="d-flex flex-column justify-content-center align-items-center w-100 vh-100 bg-light"
     >
       <form class="row g-3 container" id="myForm">
         <div class="col-12">
@@ -169,8 +169,28 @@
         <div class="col-12">
         </div>
     </form>
-    <button class="btn btn-dark" onclick="saveForm()">Save</button>
+    <div class="d-flex justify-content-center gap-3">
+      <button class="btn btn-dark" onclick="saveForm()">Save</button>
+      <a href="#view-data">
+        <button class="btn btn-dark" onclick="loadData()">View Data</button>
+      </a>
+    </div>
     </main>
+    <div class="w-100 min-vh-100 d-flex justify-content-center p-5 " id="view-data">
+      <table class="table ">
+        <thead>
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Prefix</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Address</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
+    </div>
     <footer>
       <!-- place footer here -->
     </footer>

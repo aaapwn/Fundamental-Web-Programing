@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4ec3c0fbf7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+    <style>
+        .font-kanit {
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <title>Personal Project ✨</title>
+</head>
+
+<body class="bg-[#0d1b2a] font-kanit">
+    <!-- header -->
+    <header class="bg-[#0d1b2a] flex fixed justify-between items-center px-5 py-3 top-0 w-11/12 font-kanit border-b border-[#415a77] transform -translate-x-1/2 left-1/2">
+        <a href="/it/65070185/project"><h1 class="text-white text-2xl font-semibold"><span class="text-orange-500">aaa</span>pwn</h1></a>
+        <div class="sm:flex text-secondary gap-x-4 items-center hidden">
+            <div class="flex gap-x-3 ">
+                <a href="/it/65070185/project" class="hover:text-orange-400 duration-75">Home</a>
+                <a href="/it/65070185/project/lecture" class="text-orange-500">Lecture</a>
+                <a href="/it/65070185/project/refer" class="hover:text-orange-400 duration-75">Reference</a>
+            </div>
+            <p>|</p>
+            <div class="flex gap-x-3 items-center">
+                <a href="https://github.com/aaapwn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/armaarmayoii_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <img src="../assets/profile.jpg" alt="" class="rounded-full w-5 h-5">
+            </div>
+        </div>
+        <i class="fa-solid fa-bars sm:hidden text-xl text-white cursor-pointer" id="menu-open" onclick="openMenu()" ></i>
+    </header>
+    <div class="fixed h-screen w-full bg-[#0d1b2a] hidden justify-center items-center flex-col gap-y-5 z-10" id="menu-mobile">
+        <a href="/it/65070185/project"><h1 class="text-white text-3xl font-semibold"><span class="text-orange-500">aaa</span>pwn</h1></a>
+        <div class="flex flex-col text-secondary gap-y-5 items-center text-xl">
+            <div class="flex gap-y-3 flex-col items-center">
+                <a href="/it/65070185/project" class="hover:text-orange-400 duration-75">Home</a>
+                <a href="/it/65070185/project/lecture" class="text-orange-500">Lecture</a>
+                <a href="/it/65070185/project/refer" class="hover:text-orange-400 duration-75">Reference</a>
+            </div>
+            <div class="flex gap-x-3 items-center text-xl">
+                <a href="https://github.com/aaapwn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/armaarmayoii_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <img src="../assets/profile.jpg" alt="" class="rounded-full w-5 h-5">
+            </div>
+        </div>
+        <i class="fa-regular fa-circle-xmark text-3xl text-white mt-10 cursor-pointer" onclick="closeMenu()"></i>
+    </div>
+
+    <!-- content -->
+
+    <!-- search content -->
+    <div class="fixed w-12 aspect-square rounded-full right-10 bottom-10 bg-orange-500 flex justify-center items-center" onclick="openContentBrowser()">
+        <i class="fa-solid fa-magnifying-glass text-xl"></i>
+    </div>
+    <div class="bg-[#0d1b2a] hidden fixed grid-cols-1 md:grid-cols-3 w-full h-screen text-white p-10" id="content-browser">
+        <div>
+            <a href="#Unit1" class="close-content-browser"><h3 class=" font-semibold hover:text-orange-500"><i class="fa-solid fa-globe"></i> Unit1 - Introduction to Internet & Web system</h3></a>
+            <ul class="list-disc ml-7">
+                <a href="#internet" class="close-content-browser"><li class="hover:text-orange-500">Internet</li></a>
+                <a href="#the-world-wide-web" class="close-content-browser"><li class="hover:text-orange-500">The World Wide Web</li></a>
+                <a href="#client-server-architechure" class="close-content-browser"><li class="hover:text-orange-500">Client-Server Architechure</li></a>
+                <a href="#web-browser-server" class="close-content-browser"><li class="hover:text-orange-500">Web Server & Web Browser</li></a>
+                <a href="#osi-model" class="close-content-browser"><li class="hover:text-orange-500">OSI Model</li></a>
+                <a href="#essentail-protocols" class="close-content-browser"><li class="hover:text-orange-500">Essential Protocols</li></a>
+                <a href="#web-development" class="close-content-browser"><li class="hover:text-orange-500">Web Development</li></a>
+                <a href="#front-end-tech" class="close-content-browser"><li class="hover:text-orange-500">Front-end Technologies</li></a>
+                <a href="#back-end-tech" class="close-content-browser"><li class="hover:text-orange-500">Back-end Technologies</li></a>
+            </ul>
+        </div>
+        <div>
+            <a href="#Unit2" class="close-content-browser"><h3 class="font-semibold hover:text-orange-500"><i class="fa-solid fa-globe"></i> Unit2 - HTML and CSS</h3></a>
+            <ul class="list-disc ml-7">
+                <a href="#introduction-html" class="close-content-browser"><li class="hover:text-orange-500">Introduction to HTML</li></a>
+                <a href="#element-tag" class="close-content-browser"><li class="hover:text-orange-500">Element Tags</li></a>
+                <a href="#element-attr" class="close-content-browser"><li class="hover:text-orange-500">Element Attribute</li></a>
+                <a href="#html-struc" class="close-content-browser"><li class="hover:text-orange-500">HTML Structure</li></a>
+                <a href="#doc-hierarchy" class="close-content-browser"><li class="hover:text-orange-500">Document Hierarchy</li></a>
+                <a href="#introduction-css" class="close-content-browser"><li class="hover:text-orange-500">Introduction to CSS</li></a>
+                <a href="#type-css" class="close-content-browser"><li class="hover:text-orange-500">Type of Style Sheet</li></a>
+            </ul>
+        </div>
+        <div>
+            <a href="#Unit3" class="close-content-browser"><h3 class="font-semibold hover:text-orange-500"><i class="fa-solid fa-globe"></i> Unit3 - JavaScript</h3></a>
+            <ul class="list-disc ml-7">
+                <a href="#introduction-js" class="close-content-browser"><li class="hover:text-orange-500">Introduction to JavaScript</li></a>
+                <a href="#req-res-model" class="close-content-browser"><li class="hover:text-orange-500">Request-Response Model</li></a>
+                <a href="#client-secipt-benefit" class="close-content-browser"><li class="hover:text-orange-500">Client-side scripting benefits</li></a>
+                <a href="#js-framework" class="close-content-browser"><li class="hover:text-orange-500">JavaScript Framework</li></a>
+            </ul>
+        </div>
+        <div>
+            <a href="#Unit4" class="close-content-browser"><h3 class="font-semibold hover:text-orange-500"><i class="fa-solid fa-globe"></i> Unit4 - Document Object Model</h3></a>
+            <ul class="list-disc ml-7">
+                <a href="#introduction-dom" class="close-content-browser"><li class="hover:text-orange-500">Introduction to DOM</li></a>
+                <a href="#browser-n-dom" class="close-content-browser"><li class="hover:text-orange-500">Browser and DOM</li></a>
+                <a href="#type-of-dom" class="close-content-browser"><li class="hover:text-orange-500">Type of DOM Nodes</li></a>
+                <a href="#relation-node" class="close-content-browser"><li class="hover:text-orange-500">Relationship among Nodes</li></a>
+            </ul>
+        </div>
+        <div>
+            <a href="#Unit5" class="close-content-browser"><h3 class="font-semibold hover:text-orange-500"><i class="fa-solid fa-globe"></i> Unit5 - Web Data and Local Storage</h3></a>
+            <ul class="list-disc ml-7">
+                <a href="#json" class="close-content-browser"><li class="hover:text-orange-500">JSON (JavaScript Object Notation)</li></a>
+                <a href="#convert-table-to-json" class="close-content-browser"><li class="hover:text-orange-500">Convert table to JSON format</li></a>
+                <a href="#localStorage" class="close-content-browser"><li class="hover:text-orange-500">localStorage</li></a>
+            </ul>
+        </div>
+        <div>
+            <a href="#Unit6" class="close-content-browser"><h3 class="font-semibold hover:text-orange-500"><i class="fa-solid fa-globe"></i> Unit6 - Responsive Web Design</h3></a>
+        </div>
+    </div>
+    
+    <!-- main content -->
+    <main class="w-full min-h-screen pt-14 flex px-7">
+        <div class="max-w-3xl text-left text-white mx-auto my-0 py-8">
+            <div class="flex flex-col gap-y-5">
+                <div class="flex flex-col gap-y-3 scroll-mt-20" id="Unit1">
+                    <h3 class="text-2xl font-semibold"><i class="fa-solid fa-globe"></i> Unit1 - Introduction to Internet & Web system</h3>
+                    <hr width="100%">
+                    <div id="internet" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Internet</h2>
+                        <ul class="list-disc ml-7">
+                            <li>เครือข่ายที่เชื่อมต่อกันทั่วโลก</li>
+                            <li>ไม่มีใครเป็นเจ้าของ Internet</li>
+                            <li>ใช้ทำอะไรบ้าง? - Email, Social network, etc.</li>
+                        </ul>
+                    </div>
+                    <div id="the-world-wide-web" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">The World Wide Web</h2>
+                        <ul class="list-disc ml-7">
+                            <li>Tim Berners-Lee เป็นผู้คิดค้น world wide web</li>
+                            <li>ทำงานโดยการส่ง HTML documents ด้วย Internet ผ่าน web server ไปที่ web browser</li>
+                            <li>web pages คือ ข้อมูลที่แสดงบน Internet 1 หน้า</li>
+                            <li>web site คือ web pages จำนวนมากมาประกอบเข้าด้วยกัน โดยแต่ละ web pages อาจเชื่อมโยงถึงกันได้</li>
+                        </ul>
+                    </div>
+                    <div id="client-server-architechure" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Client-Server Architechute</h2>
+                        <p class="indent-5">คือ software design ที่ popular มากที่สุด โดยประกอบไปด้วยสองส่วนหลักๆ คือ <b>client-side และ server-side</b></p>
+                        <img src="../assets/lecture/client-server.png" alt="client-server-example" class="w-full sm:w-3/4 md:w-1/2 mx-auto my-0 mt-2">
+                    </div>
+                    <div id="web-browser-server" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Web Server & Web Browser</h2>
+                        <ul class="list-disc ml-7">
+                            <li><b>Web Server (Server-side) คือ</b> ส่วนที่ใช้สำหรับรับคำขอ(request) จาก Web Client และทำงานตามคำขอที่ได้รับ หลังจากนั้นจะทำการส่งผลลัพธ์(response) กลับไปยัง web browser</li>
+                            <li><b>Web Browser (Client-side) คือ</b> ส่วนที่ส่งคำร้องขอ(request) ไปยัง web-server และเมื่อได้รับ response จาก web-server จะทำการประมวลผลและแสดงใช้ผู้ใช้เห็น</li>
+                        </ul>
+                    </div>
+                    <div id="osi-model" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">OSI Model</h2>
+                        <ul class="list-disc ml-7">
+                            <li><b>Application layer</b> จัดการประเภทในรับ-ส่งข้อมูล เช่น การเข้าหน้า website จะใช้ HTTP (เรียกข้อมูลใน layer นี้ว่า message)</li>
+                            <li><b>Presentation layer</b> ควบคุมการบีบอัดและถอดรหัสข้อมูล</li>
+                            <li><b>Session layer</b> ควบคุ๊มการเริ่ม-หยุดของการรับและส่งข้อมูล</li>
+                            <li><b>Transport layer</b> ควมคุมวิธีการรับส่งข้อมูล กำหนด protocol ว่าจะใช้อะไร (เรียกข้อมูลใน layer นี้ว่า Segment)</li>
+                            <li><b>Network Layer</b> หาเส้นทางในการรับ-ส่งข้อมูล(ระบุ IP Adress), แบ่งข้อมูลออกเป็น Package (เรียกข้อมูลใน layer นี้ว่า Datagram)</li>
+                            <li><b>Link layer</b> แบ่ง Package ให้เล็กลง เช็คและซ่อม error ข้อมูล, ระบุ mac adress ที่ใกล้เคียง (เรียกข้อมูลใน layer นี้ว่า frame)</li>
+                            <li><b>Physical layer</b> ส่งข้อมูลผ่าน physical(Ex. สายไฟ) เป็นBit (10100100)</li>
+                        </ul>
+                    </div>
+                    <div id="essentail-protocols" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Essential Protocols</h2>
+                        <ul class="list-disc ml-7">
+                            <li><b>TCP (Transmission Control Protocol) คือ</b> Protocol ที่ใช้ในการส่งข้อมูล โดยจะมีการตรวจสอบความถูกต้องว่าข้อมูลที่ส่งไปถูกต้องหรือไม่ (ส่งข้อมูลแบบเน้นถูกต้อง)</li>
+                            <li><b>IP (Internet  Protocol)</b> จะใช้ในการกำหนด IP Adress ให้แต่ละเครื่อง ในการส่งข้อมูล หรือก็คือกำหนดต้นทางและปลายทาง</li>
+                            <li><b>UDP (User Datagram Protocol)</b> ทำหน้าที่คล้ายๆ TCP แต่จะไม่มีการตรวจสอบความถูกต้องของข้อมูลให้ (ส่งข้อมูลเน้นเร็ว)</li>
+                            <li><b>Dynamic Host Configuration Protocol (DHCP)</b> ช่วยให้การ Configuration ก่อนจะเข้าถึง Internet เป็นไปแบบอัตโนมัติ</li>
+                            <li><b>FTP(File Transfer Protocol) ใช้เพื่อ copy file จาก host หนึ่งไปยังที่อื่นๆ</b></li>
+                            <li><b>HTTP (Hypertext Transfer Protocol)</b> คือ protocol ที่ใช้สื่อสารกันระหว่าง web server และ web client รู้จักกันในชื่อ <b>“request-response model”</b></li>
+                            <li><b>HTTP Secure (HTTPS)</b> คือส่วนเสริมของ HTTP ที่ช่วยให้ปลอยภัยมากขึ้น โดยจะเพิ่มใน Encrypt โดยอาศัยเทคโนโลยี SSL (Secure Sockets Layer) หรือ TLS (Transport Layer Security)</li>
+                            <li><b>DNS (Domain Name System)</b> คือส่วนที่ทำการแปลงชื่อ website หรือเรียกว่า domain name (ex. www.google.com) เป็น IP Adress (ex. 172.217.26.68) โดย DNS จะทำการจับคู่ระหว่าง Domain name กับ IP Adress</li>
+                        </ul>
+                    </div>
+                    <div id="web-development" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Web Development</h2>
+                        <ol class="list-decimal ml-7">
+                            <li><b>Front-end Development</b> คือส่วนของการพัฒนา website ที่เน้นไปที่การพัฒนาส่วน user interacts หรือเรียกรวมๆว่าพัฒนาในส่วน client-side</li>
+                            <li><b>Back-end Development</b> คือส่วนของการพัฒนา website ที่เน้นไปที่การพัฒนาในการที่ user ไม่สามารถมองเห็นและตอบโต้ได้ หรือเรียกรวมๆว่าพัฒนาในส่วน server-side</li>
+                            <li><b>Full-stack Development</b> ทำทั้ง front-end และ back-end</li>
+                        </ol>
+                    </div>
+                    <div id="front-end-tech" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Front-end Technologies</h2>
+                        <ol class="list-decimal ml-7">
+                            <li><b>HTML (Hypertext Markup Language)</b> ใช้เพื่อสร้างโครงหน้าและใส่ข้อมูใน website</li>
+                            <li><b>CSS (Cascading Style Sheets)</b> ใช้ในการตกแต่งหน้า website หรือเป็นส่วนที่กำหนดว่า หน้า website จะแสดงออกไปยังไง</li>
+                            <li><b>JavaScript</b> ใช้ในการทำให้ user สามารถ interact กับ website เช่น เมื่อกดปุ่มจะให้เกิดอะไรขึ้น</li>
+                            <li><b>AJAX (Asynchronous Javascript and XML)</b> ใช้เพื่อติดต่อกับฝั่ง web server</li>
+                        </ol>
+                    </div>
+                    <div id="back-end-tech" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Back-end Technologies</h2>
+                        <ol class="list-decimal ml-7">
+                            <li><b>PHP, Python, Ruby, Java, Golang, C#, Javascript</b> ภาษาที่คนส่วนมากใข้ในการพัฒนาฝั่ง back-end</li>
+                            <li><b>Node.js</b> เป็นตัวที่ทำให้นำ Javascript มารันนอก web browser ได้ โดยสามารถใช้ตัวนี้ในการพัฒนา back-end service หรือที่เรียกว่า API ได้</li>
+                            <li><b>API (Application Programming Interface)</b> เป็นตัวเชื่อมต่อระหว่าง front-end และ back-end โดย API จะกำหนดว่าโปรแกรมทั้งสองสามารถส่งข้อมูลระหว่างกันได้อย่างไร ข้อมูลอะไรที่สามารถแลกเปลี่ยนกันได้</li>
+                            <li>
+                                <p><b>Format of Data</b> รูปแบบข้อมูลที่ใช้ในส่วน backend จะเป็น</p>
+                                <ul class="list-disc ml-7">
+                                    <li><b>XML (Extensible Markup Language)</b> จะเป็นรูปแบบข้อมูลที่กำหนดด้วย tag คล้ายๆ HTML พูดง่ายๆคือ เหมือน PDF ที่คอมพิวเตอร์อ่านได้</li>
+                                    <li><b>JSON (JavaScripy Object Notation)</b> จะเก็บข้อมูลในรูปแบบโครงสร้าง</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-y-3 scroll-mt-20" id="Unit2">
+                    <h3 class="text-2xl font-semibold"><i class="fa-solid fa-globe"></i> Unit2 - HTML and CSS</h3>
+                    <hr width="100%">
+                    <div id="introduction-html" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Introduction to HTML</h2>
+                        <ul class="list-disc ml-7">
+                            <li><b>HTML (Hypertext Markup Language)</b> คือ ภาษาพื้นฐานในการสร้าง web pages โดยจะแสดงในรูปแบบ ข้อความ, รูปภาพ, input, etc.</li>
+                            <li><b>Hypertext</b> ข้อความที่สามารถเชื่อโยงไปยังหน้าอื่นๆได้</li>
+                            <li><b>Markup Language</b> คือภาษาที่ใช้ teg ในการแสดง content</li>
+                        </ul>
+                    </div>
+                    <div id="element-tag" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Element Tags</h2>
+                        <p class="indent-7">คือ ส่วนหลักในการสร้าง content ในภาษา HTML โดย structure ประกอบไปด้วย</p>
+                        <img src="../assets/lecture/tag-structure.png" alt="tag-structure" class="w-full sm:w-3/4 md:w-1/2 mx-auto my-0 mt-2">
+                    </div>
+                    <div id="element-attr" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Element Attribute</h2>
+                        <p class="indent-7">คือ ข้อมูลเพิ่มเติมที่ใส่ไปใน tag เพื่อวัตถุประสงค์ต่างๆ</p>
+                        <img src="../assets/lecture/element-attr.png" alt="element-attr" class="w-full sm:w-3/4 md:w-1/2 mx-auto my-0 mt-2">
+                    </div>
+                    <div id="html-struc" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">HTML Document Basic Structure</h2>
+                        <img src="../assets/lecture/html-struc.png" alt="html-struc" class="w-full sm:w-3/4 md:w-1/2 mx-auto my-0 mt-2">
+                        <ul class="list-disc ml-7">
+                            <li><b>ส่วนสีแดง</b> เป็นการประกาศว่าเป็นเอกสาร HTML</li>
+                            <li><b>ส่วนสีเขียว</b> คือ html element จะเป็นการกำหนดจุดเริ่มและจุดสิ้นสุดของเอกสาร เช่น</li>
+                            <ul class="list-disc ml-7">
+                                <li>เก็บวิธีการแสดงผลหรือ css ด้วย <span class="code">&lt;style&gt;</span></li>
+                                <li>เชื่อมต่อ resource ข้างนอกด้วย <span class="code">&lt;link&gt;</span></li>
+                                <li>เก็บหัวข้อด้วย <span class="code">&lt;title&gt;</span></li>
+                                <li>เก็บหัวข้อด้วย <span class="code">&lt;title&gt;</span></li>
+                                <li>
+                                    <p>เก็บวิธีการ encode หรือ keyword ที่ใช้ในการ search ด้วย <span class="code">&lt;meta&gt;</span></p>
+                                    <img src="../assets/lecture/meta-tag.png" alt="meta-tag-image" class="w-full sm:w-3/4 mx-auto my-0 mt-2">
+                                </li>
+                            </ul>
+                            <li><b>ส่วนสีน้ำเงิน คือ</b> head element จะทำหน้าที่เก็บรายระเอียดต่างๆของเอกสาร</li>
+                            <li><b>ส่วนสีเหลือง คือ</b> body element จะทำหน้าที่เก็บข้อมูลที่จะแสดงใน browser</li>
+                        </ul>
+                    </div>
+                    <div id="doc-hierarchy" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Document Hierarchy</h2>
+                        <p>คือการที่มี tag ซ้อน tag กัน ซึ่งสามารถอธิบายได้ด้วย tree</p>
+                        <img src="../assets/lecture/doc-hierarchy.png" alt="doc-hierarchy-image" class="w-full sm:w-3/4 md:w-1/2 mx-auto my-0 mt-2">
+                        <p>จากภาพ <span class="code">&lt;div id="logo"&gt;</span> จะมี <span class="code">&lt;img&gt;</span> และ <span class="code">&lt;h3&gt;</span> ซ้อนอยู่ข้างใน ซึ่งเราจะสรุปได้ว่า</p>
+                        <ul class="list-disc ml-7">
+                            <li><span class="code">&lt;div id="logo"&gt;</span> เป็น parents ของ <span class="code">&lt;img&gt;</span> และ <span class="code">&lt;h3&gt;</span></li>
+                            <li><span class="code">&lt;img&gt;</span> และ <span class="code">&lt;h3&gt;</span> เป็น children ของ <span class="code">&lt;div id="logo"&gt;</span></li>
+                        </ul>
+                    </div>
+                    <div id="introduction-css" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Introduction to CSS</h2>
+                        <ul class="list-disc ml-7">
+                            <li><b>CSS (Cascading Style Sheets)</b> ใช้เพื่อควบคุมการแสดงผลของ HTML elements ซึ่ง css style สามารถใส่ใน HTML โดยตรงได้</li>
+                            <li><b>A style sheet</b> คือการกำหนด <b>“rules”</b> ให้กับ HTML element โดย rules จะกำหนดว่า HTML element แต่ละอันจะแสดงออกไปยังไงเมื่ออยู่ใน browser</li>
+                            <li>
+                                <p><b>Cascade</b> เป็นกฏที่ใช้กำหนดว่า css ตัวไหนจะถูกนำไปใช้กับ HTML element เมื่อมันซ้อนทับกัน</p>
+                                <img src="../assets/lecture/cascade-css.png" alt="cascade-css-image" class="w-full sm:w-3/4 md:w-1/2 mx-auto my-0 mt-2">
+                                <p>จะเห็นได้ว่า มีการกำหนดสีซ้อนกัน โดยในกรณีนี้ จะใช้กฏ cascade ในการเลือกสีใดสีหนึ่ง ซึ่งในกรณีนี้จะเป็นสีน้ำเงิน</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="type-css" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Type of Style Sheet</h2>
+                        <ul class="list-disc ml-7">
+                            <li><b>Browser Style Sheet คือ</b> css ที่ตัว browser (ex. chrome edge opera) ใส่ให้เอง</li>
+                            <li><b>External Style Sheet คือ</b> css ภายนอกที่เราใส่เข้าไปใน HTML document เช่น การเขียน css แยกมาเป็นอีกไฟล์ เช่น style.css แล้วนำมา import ใน HTML document โดยใช้ <span class="code">&lt;link herf="style.css" rel="stylesheet" /&gt;</span></li>
+                            <li>Internal / Embedded Style Sheet คือการกำหนด css ภายใต้ tag <span class="code">&lt;style&gt;</span> ใน HTML Document</li>
+                            <li>Inline Styles คือการกำหนด css โดยตรงใน tag เช่น <span class="code">&lt;h1 style="color:blue;"&gt;this is text&lt;/h1&gt;</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-y-3 scroll-mt-20" id="Unit3">
+                    <h3 class="text-2xl font-semibold"><i class="fa-solid fa-globe"></i> Unit3 - JavaScript</h3>
+                    <hr width="100%">
+                    <div id="introduction-js" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Introduction to JavaScript</h2>
+                        <p class="indent-7"><b>JavaScript</b> เป็นภาษาการเขียนโปรแกรมแบบสคริปต์ (interpreted) ที่ใช้เพื่อสร้างปฏิสัมพันธ์และไดนามิกให้กับหน้าเว็บ โดยจะสามารถเปลี่ยนเนื้อหาบนเว็บไซต์ได้โดยที่ไม่จำเป็นต้องกด refresh หน้าใหม่</p>
+                    </div>
+                    <div id="req-res-model" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Request-Response Model</h2>
+                        <img src="../assets/lecture/req-res-model.png" alt="cascade-css-image" class="w-full sm:w-3/4 md:w-1/2 mx-auto my-0 mt-2">
+                        <ul class="list-disc ml-7">
+                            <li><b>GET Method </b>ข้อมูลจะปรากฏอยู่บน Adress bar และ body</li>
+                            <li><b>POST Method</b> ข้อมูลจะอยู่ในส่วนของ body โดยข้อมูลจะมีความ private มากกว่า</li>
+                        </ul>
+                    </div>
+                    <div id="client-secipt-benefit" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Client-side scripting benefits</h2>
+                        <ul class="list-disc ml-7">
+                            <li>ทำให้ผู้ใช้สามารถ interact กับ HTML และ CSS ได้</li>
+                            <li>
+                                <p>ลดภาระให้กับ server เนื่องจากรันบนฝั่ง client (ใช้ hardware ของ user ในการประมวลผล)</p>
+                                <ul class="list-disc ml-7">
+                                    <li>ลดการ request-response กับฝั่ง server เนื่องจากโค้ดบางส่วนรันบน cilent ได้เลย</li>
+                                    <li>เนื่องจากโค้ดรันบน client การประมวลผลจะเร็ว ไม่ต้องรอ response จาก server</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>สามารถโต้ตอบกับ user ได้ (ทำ event handling ได้) เช่น คลิกเมาส์, กดปุ่ม</p>
+                                <img src="../assets/lecture/client-script-benefit.png" alt="cascade-css-image" class="w-full sm:w-3/4 md:w-1/2 mx-auto my-0 mt-2">
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="js-framework" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">JavaScript Framework</h2>
+                        <p class="indent-7">คือเครื่องมือที่ทำให้เราสามารถทำงานกับภาษา JavaScript ได้ง่ายขึ้น ช่วยลดขั้นตอนในการทำงานและการเขียนโค้ด ซึ่งมีหลากหลายมาก เช่น</p>
+                        <ul class="list-disc ml-7">
+                            <li><b>React</b></li>
+                            <li><b>Angular</b></li>
+                            <li><b>Vue</b></li>
+                            <li><b>jQuery</b></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col gap-y-3 scroll-mt-20" id="Unit4">
+                    <h3 class="text-2xl font-semibold"><i class="fa-solid fa-globe"></i> Unit4 - Document Object Model</h3>
+                    <hr width="100%">
+                    <div id="introduction-dom" class="scroll-mt-20">
+                        <p class="indent-7"><b>Document Object Model (DOM)</b> เป็นโครงสร้างข้อมูลแบบลำดับชั้นที่แสดงเนื้อหาของหน้าเว็บ ประกอบด้วยองค์ประกอบ HTML ทั้งหมด ซึ่งเราสามารถใช้ JavaScript ในการจัดการ DOM เพื่อเปลี่ยนองค์ประกอบของ HTML Document ได้ เช่น สร้าง ลบ แก้ไข element ต่างๆใน HTML</p>
+                        <ul class="list-disc ml-7">
+                            <li>ทุกๆ element ใน HTML จะถูกเปลี่ยนเป็น Object (concent OOP เลย)</li>
+                            <li>เมื่อเป็น object แล้ว เราสามารถเปลี่ยนแปลง properties หรือเรียกใช้ method ได้</li>
+                            <li>จะมองโครงสร้าง HTML ต่างๆเป็น tree</li>
+                        </ul>
+                        <img src="../assets/lecture/dom-tree.png" alt="dom tree image" class="w-full sm:w-3/4 mx-auto my-0 mt-2">
+                    </div>
+                    <div id="browser-n-dom" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Browser and DOM</h2>
+                        <p class="indent-7">เมื่อ brower ได้รับ HTML Document มา ก่อนที่จะแสดงผล brower จะทำการแปลงให้เป็น DOM tree ก่อนถึงจะแสดงผลออกไป</p>
+                        <img src="../assets/lecture/browser-n-dom.png" alt="dom tree image" class="w-full sm:w-3/4 mx-auto my-0 mt-2">
+                        <p class="underline text-base font-medium">ตัวอย่าง</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-3">
+                            <img src="../assets/lecture/dom-example-code.png" alt="dom-code" class="w-full aspect-video">
+                            <img src="../assets/lecture/dom-example-tree.png" alt="dom-ctree" class="w-full aspect-video">
+                        </div>
+                    </div>
+                    <div id="type-of-dom" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Type of DOM Nodes</h2>
+                        <ol class="list-decimal ml-7">
+                            <li><b>Document node</b> จุดเริ่มต้นของ tree</li>
+                            <li><b>Element Node</b> HTML tag ต่างๆ (สีฟ้า)</li>
+                            <li><b>Attribure Node</b> บ่งบอกถึง attribute ของ element node (สีเขียว)</li>
+                            <li><b>Text Node</b> หมายถึงข้อความที่อยู่ใน element ต่างๆ (สีเหลือง)</li>
+                            <li><b>Comment Node</b> ส่วนที่ comment ไว้</li>
+                            <li><b>DocumentType</b> <span class="code">&lt;!DOCTYPE html&gt;</span></li>
+                        </ol>
+                        <img src="../assets/lecture/node-tree.png" alt="dom tree image" class="w-full sm:w-3/4 mx-auto my-0 mt-2">
+                    </div>
+                    <div id="relation-node" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Relationship among Nodes</h2>
+                        <ul class="list-disc ml-7">
+                            <li><b>Root node คือ</b> Node ที่อยู่บนสุด</li>
+                            <li><b>Parent node คือ</b> Node ที่มี child node</li>
+                            <li><b>Child node คือ</b> Node ที่อยู่ภายใต้ Parent node</li>
+                            <li><b>Leaf คือ</b> Node ที่ไม่มี child node</li>
+                            <li><b>Siblings คือ</b> set ของ node ที่มี parent เดียวกัน</li>
+                            <li>ทุก node จะต้องมี parent node ยกเว้น root</li>
+                        </ul>
+                        <img src="../assets/lecture/relation-node.png" alt="dom tree image" class="w-full sm:w-3/4 mx-auto my-0 mt-2">
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-y-3 scroll-mt-20" id="Unit5">
+                    <h3 class="text-2xl font-semibold"><i class="fa-solid fa-globe"></i> Unit5 - Web Data and Local Storage</h3>
+                    <hr width="100%">
+                    <div id="json" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">JSON (JavaScript Object Notation)</h2>
+                        <p class="indent-7">JSON (JavaScript Object Notation) เป็นรูปแบบข้อมูลแบบข้อความที่ใช้เพื่อแลกเปลี่ยนข้อมูลระหว่างแอปพลิเคชันต่างๆ โดยใช้ข้อความธรรมดา รูปแบบ JSON นั้นง่ายต่อการอ่านและเขียนทั้งโดยมนุษย์และโปรแกรมคอมพิวเตอร์</p>
+                        <ul class="list-disc ml-7">
+                            <li>จัดเก็บเป็นรูปแบบ key/value(object) หรือ sequence(array)</li>
+                            <li>ส่วนใหญ่การสื่อสารระหว่าง web server และ web client จะใช้ข้อมูลรูปแบบนี้</li>
+                        </ul>
+                        <p class="underline text-base font-medium">ตัวอย่าง1</p>
+                        <img src="../assets/lecture/json-object.png" alt="dom tree image" class="w-full sm:w-3/4 md:w-1/2 mx-auto my-0 mt-2">
+                        <p>ในตัวอย่าง JSON จะเก็บเป็น Object เช่น</p>
+                        <ul class="list-disc ml-7">
+                            <li>key คือ “firstname”</li>
+                            <li>value คือ “Puwit”</li>
+                        </ul>
+                        <p class="underline text-base font-medium">ตัวอย่าง2</p>
+                        <img src="../assets/lecture/json-array.png" alt="dom tree image" class="w-full sm:w-3/4 md:w-1/2 mx-auto my-0 mt-2">
+                        <p>ในตัวอย่าง JSON จะเก็บเป็น Array ที่มีสมาชิก 3 ตัว</p>
+                    </div>
+                    <div id="convert-table-to-json" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Convert table to JSON format (ใช้ใน lab5 ข้อ 1)</h2>
+                        <img src="../assets/lecture/table-json-1.png" alt="table-json" class="w-full sm:w-3/4 mx-auto my-0 mt-2">
+                        <ol class="list-decimal list-inside">
+                            <li>ดูว่ามี column อะไรบ้าง ตามตัวอย่างคือ company, contact, country</li>
+                            <li>แบ่งข้อมูลว่ามีกี่ชุด ตามตัวอย่างคือ 3 ชุด</li>
+                            <li>
+                                <span>ไล่ทำทีละชุด โดยให้ชื่อ column เป็น key และ ข้อมูลเป็น value โดยข้อมูลแต่ละชุดจะเก็บเป็น object</span>
+                                <img src="../assets/lecture/table-json-2.png" alt="table-json" class="w-full sm:w-3/4 md:w-1/2 mx-auto my-0 mt-2">
+                            </li>
+                            <li>
+                                <span>เมื่อทำเสร็จทุกชุดแล้ว ให้นำข้อมูลทุกชุดไปเก็บไว้ใน array</span>
+                                <img src="../assets/lecture/table-json-3.png" alt="table-json" class="w-full sm:w-3/4 md:w-1/2 mx-auto my-0 mt-2">
+                            </li>
+                        </ol>
+                    </div>
+                    <div id="localStorage" class="scroll-mt-20">
+                        <h2 class="underline text-xl font-medium">Local Storage</h2>
+                        <p class="indent-7">จะเป็นการจัดเก็บข้อมูลของ browser ในรูปแบบ key/value ในฝั่งของ client โดยข้อมูลประเภท localStorage นั้น จะถูกจัดเก็บบนเครื่องของ client หรือก็คือข้อมูลจะถูกเก็บใน storage ของคอมพิวเตอร์ของผู้ใช้นั่นแหละ</p>
+                        <ul class="list-disc ml-7">
+                            <li>ข้อมูลที่เก็บจะแยกเว็บไซต์กัน เช่น localStorage ของ onlearn เว็บไซต์ที่จะเรียกใช้ข้อมูลนี้นั้นจะมีแค่ onlearn เว็บอื่นจะมาเรียกใช้ข้อมูลตรงนี้ไม่ได้</li>
+                            <li>ถ้าข้อมูลใน localStorage จะถูกเก็บไว้ตลอดแม้เราจะเปิดเครื่องหรือปิดหน้าเว็บนั้นไป ถ้าไม่ถูกลบออก</li>
+                        </ul>
+                        <p class="underline text-base font-medium">วิธีดู localStoage ของแต่ละ Website</p>
+                        <ol class="list-decimal ml-7">
+                            <li>อยากดู localStorage ของ onlearn</li>
+                            <li>
+                                <span>กด ctrl+shift+c เพื่อเปิดหน้า developer tools (ใน safari เหมือนจะทำไม่ได้)</span>
+                                <img src="../assets/lecture/l-storage-1.png" alt="see-local" class="w-full sm:w-3/4 mx-auto my-0 mt-2">
+                            </li>
+                            <li>
+                                <span>กด <span class="code">>></span> ข้างๆ tab performance และเลือก Application</span>
+                                <img src="../assets/lecture/l-storage-2.png" alt="see-local" class="w-full sm:w-3/4 mx-auto my-0 mt-2">
+                            </li>
+                            <li>
+                                <span>ในเมนู Local Storage กดให้มันแสดงชื่อเว็บ onlearn หลังจากนั้นกดเข้าไปดู ก็จะเห็น localStorage ทุกอันของ Website นี้</span>
+                                <img src="../assets/lecture/l-storage-3.png" alt="see-local" class="w-full sm:w-3/4 mx-auto my-0 mt-2">
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-y-3 scroll-mt-20" id="Unit6">
+                    <h3 class="text-2xl font-semibold"><i class="fa-solid fa-globe"></i> Unit6 - Responsive Web Design</h3>
+                    <hr width="100%">
+                    <div>
+                        <p>คือการทำให้เว็บไซต์แสดงผลลัพธ์ได้หลายขนาดหน้าจอ เช่น</p>
+                        <p class="underline text-base font-medium">เว็บที่ทำ Responsive</p>
+                        <div class="grid grid-cols-3 gap-x-5">
+                            <img src="../assets/lecture/res-default.png" alt="see-local" class="w-full mx-auto my-0 mt-2 col-span-2">
+                            <img src="../assets/lecture/res-mobile.png" alt="see-local" class="w-full mx-auto my-0 mt-2">
+                        </div>
+                        <p class="underline text-base font-medium">เว็บที่ไม่ทำ Responsive</p>
+                        <div class="grid grid-cols-3 gap-x-5">
+                            <img src="../assets/lecture/nores-default.png" alt="see-local" class="w-full mx-auto my-0 mt-2 col-span-2">
+                            <img src="../assets/lecture/nores-mobile.png" alt="see-local" class="w-full mx-auto my-0 mt-2">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer class="flex justify-center items-center gap-x-1 text-secondary font-kanit text-sm py-5">
+        <span>65070185</span><a href="https://www.aaapwn.com" class="hover:underline" target="_blank">@aaapwn</a>
+    </footer>
+    <script>
+        function openMenu() {
+            document.getElementById('menu-mobile').classList.toggle('hidden')
+            document.getElementById('menu-mobile').classList.toggle('flex')
+        }
+
+        function closeMenu() {
+            document.getElementById('menu-mobile').classList.toggle('flex')
+            document.getElementById('menu-mobile').classList.toggle('hidden')
+        }
+
+        function openContentBrowser() {
+            document.getElementById('content-browser').classList.toggle('hidden')
+            document.getElementById('content-browser').classList.toggle('grid')
+        }
+
+        Array.from(document.getElementsByClassName('close-content-browser')).forEach((item) => {
+            item.addEventListener('click', () => {
+                document.getElementById('content-browser').classList.toggle('grid')
+                document.getElementById('content-browser').classList.toggle('hidden')
+            })
+        })
+    </script>
+</body>
+</html>

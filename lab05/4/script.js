@@ -1,3 +1,5 @@
+let userData = []
+
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 const appendAlert = (message, type) => {
   const wrapper = document.createElement('div')
@@ -60,24 +62,23 @@ const saveForm = () => {
             province: result["province"].value,
             postalCode: result["postalCode"].value,
         }
-        localStorage.setItem('data', JSON.stringify(data))
+        userData.push(data)
+        localStorage.setItem('data', JSON.stringify(userData))
+        loadData()
     }
     appendAlert(alertMessage.join(''), alertType)
 }
 
 const loadData = () => {
-    const data = JSON.parse(localStorage.getItem('data'))
-    if (data) {
-        const result = document.forms["myForm"]
-        result["idCard"].value = data.idCard
-        result["prefix"].value = data.prefix
-        result["firstName"].value = data.firstName
-        result["lastName"].value = data.lastName
-        result["address"].value = data.address
-        result["subDistrict"].value = data.subDistrict
-        result["district"].value = data.district
-        result["province"].value = data.province
-        result["postalCode"].value = data.postalCode
-    }
+    userData = JSON.parse(localStorage.getItem('data'))
+    const table = document.getElementById('table-body')
+    table.innerHTML = ''
+    userData.map((item) => {
+        const row = table.insertRow()
+        row.insertCell().innerHTML = item.idCard
+        row.insertCell().innerHTML = item.prefix
+        row.insertCell().innerHTML = item.firstName
+        row.insertCell().innerHTML = item.lastName
+        row.insertCell().innerHTML = `${item.address}, ${item.subDistrict} ${item.district} ${item.province} ${item.postalCode}`
+    })
 }
-loadData()

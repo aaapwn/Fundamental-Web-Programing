@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4ec3c0fbf7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .font-kanit {
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Personal Project ✨</title>
+</head>
+<body class="bg-[#0d1b2a]">
+    <!-- header -->
+    <header class="bg-[#0d1b2a] flex fixed justify-between items-center px-5 py-3 top-0 w-11/12 font-kanit border-b border-[#415a77] transform -translate-x-1/2 left-1/2">
+        <a href="/it/65070185/project"><h1 class="text-white text-2xl font-semibold"><span class="text-orange-500">aaa</span>pwn</h1></a>
+        <div class="sm:flex text-secondary gap-x-4 items-center hidden">
+            <div class="flex gap-x-3 ">
+                <a href="/it/65070185/project" class="text-orange-500">Home</a>
+                <a href="/it/65070185/project/lecture" class="hover:text-orange-400 duration-75">Lecture</a>
+                <a href="/it/65070185/project/refer" class="hover:text-orange-400 duration-75">Reference</a>
+            </div>
+            <p>|</p>
+            <div class="flex gap-x-3 items-center">
+                <a href="https://github.com/aaapwn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/armaarmayoii_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <img src="../assets/profile.jpg" alt="" class="rounded-full w-5 h-5">
+            </div>
+        </div>
+        <i class="fa-solid fa-bars sm:hidden text-xl text-white cursor-pointer" id="menu-open" onclick="openMenu()" ></i>
+    </header>
+    <div class="fixed h-screen w-full bg-[#0d1b2a] hidden justify-center items-center flex-col gap-y-5" id="menu-mobile">
+        <a href="/it/65070185/project"><h1 class="text-white text-3xl font-semibold"><span class="text-orange-500">aaa</span>pwn</h1></a>
+        <div class="flex flex-col text-secondary gap-y-5 items-center text-xl">
+            <div class="flex gap-y-3 flex-col items-center">
+                <a href="/it/65070185/project" class="text-orange-500">Home</a>
+                <a href="/it/65070185/project/lecture" class="hover:text-orange-400 duration-75">Lecture</a>
+                <a href="/it/65070185/project/refer" class="hover:text-orange-400 duration-75">Reference</a>
+            </div>
+            <div class="flex gap-x-3 items-center text-xl">
+                <a href="https://github.com/aaapwn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/armaarmayoii_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <img src="../assets/profile.jpg" alt="" class="rounded-full w-5 h-5">
+            </div>
+        </div>
+        <i class="fa-regular fa-circle-xmark text-3xl text-white mt-10 cursor-pointer" onclick="closeMenu()"></i>
+    </div>
+
+    <main class="w-full min-h-screen flex justify-center items-center">
+        <div class="text-4xl text-white font-bold flex flex-col gap-y-5">
+            <p><span class="text-orange-500">Fundamental</span> Web Programing</p>
+            <p>Summarize by <span class="text-orange-500">Arm IT20</span></p>
+            <div class="flex gap-x-3">
+                <a href="/it/65070185/project/lecture" class="bg-orange-500 hover:bg-orange-400 duration-75 text-white px-5 py-2 rounded-full text-base">Explore</a>
+                <a href="./assets/Fundamental Web Programing Midterm by Arm IT20.pdf" download="Fundamental Web Programing Midterm by Arm IT20.pdf" class=" border border-orange-500 hover:border-orange-400 duration-75 text-white px-5 py-2 rounded-full text-base">Download</a>
+            </div>
+        </div>
+    </main>
+    <footer class="flex justify-center items-center gap-x-1 text-secondary font-kanit text-sm py-5 w-full fixed bottom-0">
+        <span>65070185</span><a href="https://www.aaapwn.com" class="hover:underline" target="_blank">@aaapwn</a>
+    </footer>
+
+    <script>
+        function openMenu() {
+            document.getElementById('menu-mobile').style.display = 'flex';
+        }
+        function closeMenu() {
+            document.getElementById('menu-mobile').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
