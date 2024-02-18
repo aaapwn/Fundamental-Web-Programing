@@ -5,7 +5,7 @@
 // $dbname = "s185e";
 $servername = "localhost";
 $username = "S185E";
-$password = "VQ60973";
+$password = "";
 $dbname = "s185e";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
