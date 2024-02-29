@@ -24,7 +24,8 @@
     include 'db.php';
     $res = $db->query("SELECT * FROM `customers`;"); 
     ?>
-    <table class="table w-75 mx-auto my-0 ">
+    <p class="text-center mt-lg-3 fw-bold" style="color: red;">***สำหรับเพื่อนๆ ที่เข้ามาลองเล่น เหลือข้อมูลไว้ให้อาจารย์กดลบด้วยครับ***</p>
+    <table class="table w-75 mx-auto mb-5 ">
         <thead>
             <tr>
                 <th scope="col">ID</th>
